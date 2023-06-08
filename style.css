@@ -1,0 +1,81 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* The main scrollbar */
+::-webkit-scrollbar {
+    width: 3px; /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(3,7,18); /* Set the color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(60, 60, 65); /* Set the color of the scrollbar thumb */
+    border-radius: 10px; /* Set the border radius of the thumb */
+}
+
+
+.page{
+    height: 100vh;
+    display: flex;
+}
+
+.scroll{
+    position: fixed;
+    z-index: 10;
+    width: 300px;
+    height: 300px;
+    background-color: #202052;
+    border-radius: 100%;
+    top: 10%;
+    left: calc(40% - 150px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section1{
+    width: 40%;
+    background-color: #202052;
+}
+
+.section2{
+    width: 60%;
+    background-color: #0b0b1f;
+    position: relative;
+}
+
+.page img{
+    position: absolute;
+}
+
+.imagePage1-lowerLeft{
+    width: 200px;
+    bottom: 0;
+    left: 10%;
+}
+.imagePage1-upperLeft{
+    top: -10%;
+}
+
+.imagePage1-lowerRight{
+    bottom: -10%;
+    right: -5%;
+}
+
+.imagePage1-upperRight{
+    top: -20%;
+    right: 10%;
+}
+
+.imagePage1-middle{
+    top: 18%;
+    right: 22%;
+    height: 400px;
+}
+

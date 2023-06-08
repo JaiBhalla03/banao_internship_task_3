@@ -1,0 +1,7 @@
+{
+  "name": "banao_task_3",
+  "version": "1.0.0",
+  "dependencies": {
+    "gsap": "^3.12.1"
+  }
+}
