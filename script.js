@@ -91,10 +91,119 @@ window.addEventListener("scroll", decreaseStrokeOffset);
 //dealing with the dots
 const dot1 = document.querySelector('.dot1');
 dot1.style.fill = 'white';
-//
-// function fillTheCircleOnScroll(){
-//
-// }
-//
-// //attach the given function to the scroll event
-// window.addEventListener("scroll", fillTheCircleOnScroll);
+
+// JavaScript for manual navigation
+const slides = document.querySelectorAll('.slide');
+const btns = document.querySelectorAll('.btn');
+let currentSlide = 0;
+
+const manualNav = function(manual) {
+    slides.forEach((slide) => {
+        slide.classList.remove('active');
+        btns.forEach((btn) => {
+            btn.classList.remove('active');
+        })
+    })
+    slides[manual].classList.add('active');
+    btns[manual].classList.add('active');
+    currentSlide = manual;
+}
+
+btns.forEach((btn, i) => {
+    btn.addEventListener("click", () => {
+        manualNav(i);
+    });
+});
+
+// JavaScript for swipe navigation
+const slider = document.querySelector('.slider');
+let isDragging = false;
+let startPos = 0;
+let currentTranslate = 0;
+let prevTranslate = 0;
+let animationID = 0;
+
+slides.forEach((slide, index) => {
+    const slideImage = slide.querySelector('div');
+    slideImage.addEventListener('dragstart', (e) => e.preventDefault());
+
+    // Touch events
+    slide.addEventListener('touchstart', touchStart(index));
+    slide.addEventListener('touchend', touchEnd);
+    slide.addEventListener('touchmove', touchMove);
+
+    // Mouse events
+    slide.addEventListener('mousedown', touchStart(index));
+    slide.addEventListener('mouseup', touchEnd);
+    slide.addEventListener('mousemove', touchMove);
+    slide.addEventListener('mouseleave', touchEnd);
+});
+
+// Disable context menu on slider
+slider.oncontextmenu = function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    return false;
+}
+
+function touchStart(index) {
+    return function(event) {
+        currentSlide = index;
+        startPos = getPositionX(event);
+        isDragging = true;
+
+        // Stop autoplay
+        clearInterval(animationID);
+    }
+}
+
+function touchEnd() {
+    isDragging = false;
+    const movedBy = currentTranslate - prevTranslate;
+    if (movedBy < -100 && currentSlide < slides.length - 1) {
+        currentSlide += 1;
+    }
+    if (movedBy > 100 && currentSlide > 0) {
+        currentSlide -= 1;
+    }
+    setPositionByIndex();
+
+    // Restart autoplay
+    startAutoplay();
+}
+
+function touchMove(event) {
+    if (isDragging) {
+        const currentPosition = getPositionX(event);
+        currentTranslate = prevTranslate + currentPosition - startPos;
+    }
+}
+
+function getPositionX(event) {
+    return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+}
+
+function setPositionByIndex() {
+    slides.forEach((slide, index) => {
+        if (index === currentSlide) {
+            slide.classList.add('active');
+            btns[index].classList.add('active');
+        } else {
+            slide.classList.remove('active');
+            btns[index].classList.remove('active');
+        }
+    });
+
+    slider.style.transform = `translateX(${currentSlide * -100}%)`;
+}
+
+function startAutoplay() {
+    animationID = setInterval(() => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        setPositionByIndex();
+    }, 10000);
+}
+
+// Initialize slider
+setPositionByIndex();
+startAutoplay();
