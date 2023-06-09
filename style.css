@@ -39,15 +39,30 @@ body{
     align-items: center;
 }
 
+#Transparent_Ring{
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+}
+
+#Opaque_Ring{
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+}
+
 .section1{
     width: 40%;
-    background-color: #202052;
 }
 
 .section2{
     width: 60%;
-    background-color: #0b0b1f;
     position: relative;
+}
+
+.section1.page1{
+    background-color: #202052;
+}
+.section2.page1{
+    background-color: #0b0b1f;
 }
 
 .page img{
@@ -79,3 +94,32 @@ body{
     height: 400px;
 }
 
+
+.section1.page2{
+    background-color: #0f0f25;
+}
+
+.section2.page2{
+    background-color: #202052;
+    overflow: hidden;
+}
+
+.imagePage2-middle{
+    height: 400px;
+    top: 20%;
+    left: 10%;
+}
+
+.imagePage2-upperRight{
+    height: 400px;
+    right: 10%;
+    top: -10%;
+}
+
+.section1.page3{
+    background-color: #3434f8;
+}
+
+.section2.page3{
+    background-color: #202052;
+}
