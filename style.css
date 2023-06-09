@@ -124,22 +124,27 @@ body{
     background-color: #202052;
 }
 
-.container-2{
-     display: block;
-}
-
-.container{
-    display: none;
-}
-
-@media (min-width: 750px) {
-    .container{
+@media (max-width: 768px) {
+    .container {
         display: block;
     }
-    .container-2{
+
+    .container-2 {
         display: none;
     }
 }
+
+@media (min-width: 769px) {
+    .container {
+        display: none;
+    }
+
+    .container-2 {
+        display: block;
+    }
+}
+
+
 
 .slider{
     height: 100vh;
