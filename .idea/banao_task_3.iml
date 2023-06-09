@@ -12,5 +12,8 @@
     <orderEntry type="library" name="ScrollMagic" level="application" />
     <orderEntry type="library" name="OwlCarousel2" level="application" />
     <orderEntry type="library" name="swiper" level="application" />
+    <orderEntry type="library" name="slick-carousel" level="application" />
+    <orderEntry type="library" name="jquery-3.6.0" level="application" />
+    <orderEntry type="library" name="glider-js" level="application" />
   </component>
 </module>

@@ -93,17 +93,25 @@ const dot1 = document.querySelector('.dot1');
 dot1.style.fill = 'white';
 
 
-var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 1,
-    loop: true,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        renderBullet: function (index, className) {
-            return '<span class="' + className + '">' + '</span>';
-        },
+const glider = new Glider(document.querySelector('.glider'), {
+    slidesToShow: 1,
+    draggable: true,
+    dots: '.glider-dots',
+    arrows: {
+        prev: '.glider-prev',
+        next: '.glider-next',
     },
-    // autoplay:{
-    //     delay: 5000
-    // }
+    responsive: [
+        {
+            breakpoint: 768, // Adjust the breakpoint value as needed
+            settings: {
+                draggable: true,
+                dots: '.glider-dots',
+                arrows: {
+                    prev: '.glider-prev',
+                    next: '.glider-next',
+                },
+            },
+        },
+    ],
 });

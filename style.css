@@ -124,80 +124,28 @@ body{
     background-color: #202052;
 }
 
-
-.container {
+.container{
     display: none;
 }
-
-.container-2 {
-    display: none;
-}
-
-@media only screen and (max-width: 600px) and (min-width: 300px){
-    .container {
-        display: none;
-    }
-
-    .container-2 {
-        display: block;
-    }
-}
-
-.slider{
-    height: 100vh;
-    width: 100%;
-    position: relative;
-    background-color: yellow;
-}
-
-
-.slide{
-    position: absolute;
-    width: 100%;
-    z-index: 1;
-    clip-path: circle(0% at 0 50%);
-}
-
-.slide.active{
-    clip-path: circle(150% at 0 50%);
-    transition: 2s;
-    transition-property: clip-path;
-}
-
-.navigation{
-    z-index: 2;
-    position: absolute;
-    display: flex;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.btn{
-    background-color: rgba(255,255,255, 0.5);
-    width: 12px;
-    height: 12px;
-    margin: 10px;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.btn.active{
-    background-color: white;
-}
-
 .swiper-container {
-    width: 100%;
+    width: 140%;
     height: 100vh;
+    position: relative;
+}
+
+.swiper-wrapper{
+    padding: 0;
 }
 
 .swiper-slide {
-    display: flex;
-    width: 100%;
     height: 100%;
-    justify-content: center;
+    width: 100%;
     align-items: center;
     font-size: 24px;
+}
+
+.swiper-slide img{
+    position: absolute;
 }
 
 .swiper-pagination {
@@ -208,5 +156,61 @@ body{
 }
 
 .swiper-pagination .swiper-pagination-bullet {
-    background-color: black; /* Set the color of the pagination dots */
+    background-color: black ; /* Set the color of the pagination dots */
+}
+
+
+.mobile-section1{
+    height: 50vh;
+    position: relative;
+}
+
+
+.mobile-section2{
+    color: white;
+    height: 50vh;
+}
+
+.mobile-page3-lowerLeft{
+    width: 200px;
+    bottom: -40%;
+}
+
+.mobile-page3-upperRight{
+    width: 150px;
+    right: 10%;
+    top: -30%;
+}
+
+.mobile-section1.page3{
+    background-color: #202052;
+}
+.mobile-section2.page3{
+    background-color: #131334;
+}
+
+
+.glider-contain {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.glider-slide {
+    width: 100%;
+    height: 100%;
+}
+
+.glider-prev,
+.glider-next {
+    display: none; /* Hide the default arrows */
+}
+
+
+.glider-dots{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
 }
