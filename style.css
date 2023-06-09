@@ -125,15 +125,19 @@ body{
 }
 
 .container-2{
+     display: block;
+}
+
+.container{
     display: none;
 }
 
-@media (max-width: 750px) {
+@media (min-width: 750px) {
     .container{
-        display: none;
+        display: block;
     }
     .container-2{
-        display: block;
+        display: none;
     }
 }
 
