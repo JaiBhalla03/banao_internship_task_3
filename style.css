@@ -124,27 +124,24 @@ body{
     background-color: #202052;
 }
 
-@media (max-width: 768px) {
+
+.container {
+    display: none;
+}
+
+.container-2 {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) and (min-width: 300px){
     .container {
-        display: block;
+        display: none;
     }
 
     .container-2 {
-        display: none;
-    }
-}
-
-@media (min-width: 769px) {
-    .container {
-        display: none;
-    }
-
-    .container-2 {
         display: block;
     }
 }
-
-
 
 .slider{
     height: 100vh;
@@ -189,3 +186,27 @@ body{
     background-color: white;
 }
 
+.swiper-container {
+    width: 100%;
+    height: 100vh;
+}
+
+.swiper-slide {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+    background-color: black; /* Set the color of the pagination dots */
+}

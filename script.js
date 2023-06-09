@@ -93,52 +93,17 @@ const dot1 = document.querySelector('.dot1');
 dot1.style.fill = 'white';
 
 
-//dealing with carousel
-const slides = document.querySelectorAll('.slide');
-const btns = document.querySelectorAll('.btn');
-let currentSlide = 1;
-
-//javascriot for manual navigation
-
-const manualNav = function(manual){
-    slides.forEach((slide)=>{
-        slide.classList.remove('active');
-        btns.forEach((btn)=>{
-            btn.classList.remove('active');
-        })
-    })
-    slides[manual].classList.add('active');
-    btns[manual].classList.add('active');
-}
-
-btns.forEach((btn, i)=>{
-    btn.addEventListener("click", ()=>{
-        manualNav(i);
-        currentSlide = i;
-    })
-})
-
-//js for the autoplay of the slider
-const repeat = function(activeClass){
-    let active = document.getElementsByClassName('active');
-    let i = 1;
-    const repeater = ()=>{
-        setTimeout(function(){
-            [...active].forEach((activeSlide)=>{
-                activeSlide.classList.remove('active');
-            })
-            slides[i].classList.add('active');
-            btns[i].classList.add('active');
-            i++;
-            if(slides.length === i){
-                i =0;
-            }
-            if(i >= slides.length){
-                return;
-            }
-            repeater();
-        }, 10000);
-    }
-    repeater();
-}
-repeat();
+var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    loop: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + '</span>';
+        },
+    },
+    // autoplay:{
+    //     delay: 5000
+    // }
+});
