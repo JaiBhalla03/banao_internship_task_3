@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Share+Tech+Mono&display=swap');
+
+
 body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* The main scrollbar */
@@ -127,59 +131,69 @@ body{
 .container{
     display: none;
 }
-.swiper-container {
-    width: 140%;
-    height: 100vh;
-    position: relative;
-}
 
-.swiper-wrapper{
-    padding: 0;
-}
-
-.swiper-slide {
-    height: 100%;
-    width: 100%;
-    align-items: center;
-    font-size: 24px;
-}
-
-.swiper-slide img{
+.glider-slide img{
     position: absolute;
-}
-
-.swiper-pagination {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.swiper-pagination .swiper-pagination-bullet {
-    background-color: black ; /* Set the color of the pagination dots */
 }
 
 
 .mobile-section1{
-    height: 50vh;
+    height: 100vh;
     position: relative;
+    overflow: hidden;
+    margin: 0;
 }
 
 
 .mobile-section2{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
     color: white;
     height: 50vh;
 }
 
+.text-container{
+    width:100%;
+    margin-top: 60px;
+    margin-left: 20px;
+}
+
+.text-container h2{
+    font-weight: 300;
+}
+.text-container p{
+    font-weight: 100;
+}
+
+.text-container div{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.text-container button{
+    border: none;
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    height: 40px;
+    padding: 10px;
+    font-size: 20px;
+}
+
 .mobile-page3-lowerLeft{
     width: 200px;
-    bottom: -40%;
+    bottom: 30%;
 }
 
 .mobile-page3-upperRight{
     width: 150px;
-    right: 10%;
-    top: -30%;
+    right: 5%;
+    top: -10%;
 }
 
 .mobile-section1.page3{
@@ -197,6 +211,11 @@ body{
     position: relative;
 }
 
+.glider{
+    width: 100%;
+    height: 100vh;
+}
+
 .glider-slide {
     width: 100%;
     height: 100%;
@@ -210,7 +229,18 @@ body{
 
 .glider-dots{
     position: absolute;
-    bottom: 10px;
+    bottom: 8px;
+    width: 70%;
     left: 50%;
     transform: translateX(-50%);
+}
+
+
+.glider-dots li {
+    width: 20px; !important;
+    height: 20px; !important;
+    margin: 0 5px; !important;
+    background-color: #ffffff; /* Set the background color */
+    border-radius: 50%;
+    cursor: pointer;
 }
