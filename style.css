@@ -311,8 +311,150 @@ body{
     top: 0%;
 }
 
+.mobile-page1-middle{
+    width: 200px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5%;
+    z-index: 100;
+}
+
 .mobile-page5-lowerRight{
     width: 150px;
     right: -20%;
     top: 10%;
+}
+
+.mobile-page6-middle{
+    width: 400px;
+    z-index: 2;
+}
+.mobile-page6-middle2{
+    width: 700px;
+    z-index: 1;
+}
+
+.mobile-section1.page6{
+    background-color: #202052;
+}
+
+.mobile-section2.page6{
+    background-color: #155d86;
+}
+
+
+.mobile-section1.page2{
+    background-color: #202052;
+}
+
+.mobile-section2.page2{
+    background-color: #6e258d;
+}
+
+
+.mobile-section2.page2 button{
+    background-color: deeppink;
+    color: white;
+}
+
+
+.mobile-page1-lowerLeft{
+    width: 200px;
+    right: 0%;
+    top: 15%;
+}
+
+.mobile-page2-lowerLeft{
+    width: 200px;
+    bottom: 30%;
+}
+
+.mobile-page2-upperRight{
+    width: 150px;
+    right: 5%;
+    top: -10%;
+}
+
+
+.mobile-page1-upperRight{
+    width: 200px;
+    top: 15%;
+}
+.mobile-page4-middle{
+    width: 150px;
+    right: 0%;
+    top: 10%;
+}
+
+.mobile-section1.page1{
+    background-color: #202052;
+}
+
+.mobile-section2.page1{
+    background-color: #6e258d;
+}
+
+.mobile-section1.page6{
+    background-color: #75da54;
+}
+
+.mobile-section2.page6{
+    background-color: #469a33;
+}
+
+.mobile-page6-lowerLeft{
+    width: 170px;
+    right: 3%;
+    top: 10%;
+}
+.mobile-page6-lowerRight{
+    width: 250px;
+    left: 5%;
+    top: 5%;
+}
+.mobile-page6-middle{
+    width: 200px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5%;
+}
+
+
+.mobile-page5-middle{
+    z-index: 200;
+}
+
+.mobile-page7-upperLeft{
+    width: 150px;
+    top: -10%;
+
+}
+.mobile-page7-lowerLeft{
+    width: 150px;
+    bottom: 35%;
+}
+.mobile-page7-upperMiddle{
+    width: 120px;
+    left: 50%;
+    transform: translateX(-35%);
+}
+.mobile-page7-lowerMiddle{
+    width: 120px;
+    left: 50%;
+    top: 40%;
+    transform: translateX(-35%);
+}
+.mobile-page7-lowerRight{
+    width: 150px;
+    right: -15%;
+    top: 25%;
+}
+
+
+
+.mobile-section1.page7{
+    background-color: cornflowerblue;
+}
+.mobile-section2.page7{
+    background-color: #2a7bad;
 }
