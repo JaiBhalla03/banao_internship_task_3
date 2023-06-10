@@ -27,6 +27,7 @@ body{
 .page{
     height: 100vh;
     display: flex;
+    justify-content: flex-end;
 }
 
 .scroll{
@@ -34,13 +35,14 @@ body{
     z-index: 10;
     width: 300px;
     height: 300px;
-    background-color: #202052;
     border-radius: 100%;
     top: 10%;
     left: calc(40% - 150px);
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color 0.5s ease;
+    background-color: #202052;
 }
 
 #Transparent_Ring{
@@ -55,6 +57,43 @@ body{
 
 .section1{
     width: 40%;
+    position: fixed;
+    background-color: #202052;
+    overflow: visible;
+}
+
+.section2{
+    overflow: hidden;
+}
+
+.section1 .text{
+    color: white;
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+    padding-left: 35px;
+}
+
+.text h1{
+    font-size: 2.5rem;
+}
+
+.text p{
+    width: 50%;
+}
+
+.inner-text{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.scroll-text{
+    color: white;
+    top: 20%;
+    position: fixed;
+    left: calc(40% - 150px);
+    z-index: 400;
 }
 
 .section2{
@@ -62,8 +101,9 @@ body{
     position: relative;
 }
 
-.section1.page1{
-    background-color: #202052;
+.section1{
+    height: 100vh;
+    transition: background-color 0.5s ease;
 }
 .section2.page1{
     background-color: #0b0b1f;
@@ -103,6 +143,20 @@ body{
     background-color: #0f0f25;
 }
 
+
+
+
+.imagePage3-middle{
+    width: 250px;
+    top: 40%;
+    left: 10%;
+
+}
+.imagePage3-upperRight{
+    width: 250px;
+    right: 0%;
+}
+
 .section2.page2{
     background-color: #202052;
     overflow: hidden;
@@ -125,12 +179,113 @@ body{
 }
 
 .section2.page3{
-    background-color: #202052;
+    background-color: #363688;
 }
 
-.container{
+
+.section2.page4{
+    background-color: #b5b5ce;
+}
+
+.imagePage4-left{
+    width: 300px;
+    top: 10%;
+}
+.imagePage4-right{
+    width: 300px;
+    right: 10%;
+    top: 10%;
+}
+
+.section2.page5{
+    background-color: #1469d0;
+}
+
+
+.imagePage7-upperLeft{
+    width: 200px;
+    top: -20%;
+    left: 15%;
+}
+.imagePage7-lowerLeft{
+    width: 200px;
+    left: 15%;
+    bottom: -15%;
+}
+.imagePage7-upperMiddle{
+    width: 200px;
+    top: -10%;
+    left: 50%;
+    transform: translateX(-40%);
+}
+.imagePage7-lowerMiddle{
+    width: 200px;
+    bottom: -20%;
+    left: 50%;
+    transform: translateX(-40%);
+}
+.imagePage7-lowerRight{
+    width: 200px;
+    right: 0%;
+    top: 15%;
+}
+
+.section2.page6{
+    background-image: url("images/interior.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.imagePage6-middle{
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section2.page7{
+    background-color: #599450;
+}
+
+.trigger-1,.trigger-2,.trigger-3,.trigger-4,.trigger-5,.trigger-6,.trigger-7{
+    position: absolute;
+    padding: 5px;
+    right: 0;
+    top: 50%;
+}
+
+
+.imagePage7-left{
+    width: 250px;
+    right: 20%;
+    bottom: -10%;
+}
+.imagePage7-right{
+    width: 350px;
+    right: 40%;
+    bottom: -23%;
+}
+
+.container {
     display: none;
 }
+
+.glider-contain {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .container{
+        display: block;
+    }
+}
+
+@media (max-width: 767px) {
+    .glider-contain{
+        display: block;
+    }
+}
+
+
 
 .glider-slide img{
     position: absolute;
@@ -451,10 +606,11 @@ body{
 }
 
 
-
 .mobile-section1.page7{
     background-color: cornflowerblue;
 }
 .mobile-section2.page7{
     background-color: #2a7bad;
 }
+
+
